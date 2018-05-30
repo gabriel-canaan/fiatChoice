@@ -2,6 +2,7 @@ const express = require("express");
 const http = require("http");
 const socketIo = require("socket.io");
 const axios = require("axios");
+require('dotenv').config();
 const port = process.env.PORT || 4001;
 const index = require("./routes/index");
 const app = express();
@@ -24,7 +25,7 @@ io.on("connection", socket => {
 const getApiAndEmit = async socket => {
   try {
     const res = await axios.get(
-        'https://api.greenbase.kiwi/accounts?customer_id=1&account_id=1', { headers: { Authorization: 'gr33nbase_example_token_!:$$' }
+      process.env.GREEN_API, { headers: { Authorization: process.env.GREEN_AUTH }
     });
     socket.emit("FromAPI", res.data);
   } catch (error) {

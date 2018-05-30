@@ -44,7 +44,6 @@ class App extends Component {
     return (
       <div>
         <h1>{ this.state.accounts.length === 0 ? 'Fetching ' : this.state.accounts.length } Accounts</h1>
-
         <ul>{items}</ul>
      </div>
     );

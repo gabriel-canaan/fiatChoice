@@ -10,7 +10,14 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.18.0",
+    "dotenv": "^5.0.1",
     "express": "^4.16.3",
+    "nem2-sdk": "^0.9.3",
     "socket.io": "^2.1.1"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.17.0",
+    "@types/dotenv": "^4.0.3",
+    "@types/express": "^4.11.1"
   }
 }
